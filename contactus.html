@@ -26,21 +26,24 @@
                 <h4>Consulation with an expert</h4>
             </div>
             <div class="formContainer">
-                <form>
+                <form onsubmit='validation(event)'>
                     <div class="inputEmail">
 
-                        <input placeholder="Enter Your Email" class="textName"/>
+                        <input  placeholder="Enter Your Email" class="textName"type="text"name="email" id="email" onblur="emailvalidate(event)"/>
                     </div>
                     <div class="inputMobile">
 
-                        <input type="tel" id="phone" name="phoneField"class="textName" placeholder="Enter Your Mobile"/>
+                        <input  type="text" name="mobileNo"  class="textName" placeholder="Enter Your Mobile"id="mobile" onblur="validMobileCheck(event)"/>
                     </div>
                     <div class="formbutton">
-
+                     
                         <button class="textName">Talk to Us<i class="fa-thin fa-arrow-right"></i>
                         </button>
+                    
+                      
                     </div>
                 </form>
+                <div style="margin:20px;font-weight: 600;" id='displayMessage'></div>
             </div>
         </div>
     </div>
